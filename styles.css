@@ -1,0 +1,133 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('drone2.avif'); /* Set the background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    color: #333;
+}
+
+/* Control panel styling */
+.control-panel {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Increased opacity for better readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Heading style */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black; /* Changed heading color for better visibility */
+}
+
+/* Direction controls styling */
+.direction-controls {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* Action controls styling */
+.action-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for transform */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Status display styling */
+.status {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Video styling */
+video {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Control buttons styling */
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.circle-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.green {
+    background-color: #28a745;
+}
+
+.green:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.red {
+    background-color: #dc3545;
+}
+
+.red:hover {
+    background-color: #c82333;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Map container styling */
+.map-container {
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .direction-controls {
+        flex-direction: column;
+    }
+
+    .control-buttons {
+        flex-direction: column;
+    }
+}

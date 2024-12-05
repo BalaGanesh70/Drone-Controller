@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Control Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="control-panel">
+        <h1>Drone Control Panel</h1>
+        <div class="direction-controls">
+            <button id="upBtn" onclick="moveDrone('UP')">UP</button>
+            <button id="leftBtn" onclick="moveDrone('LEFT')">LEFT</button>
+            <button id="rightBtn" onclick="moveDrone('RIGHT')">RIGHT</button>
+            <button id="downBtn" onclick="moveDrone('DOWN')">DOWN</button>
+        </div>
+        <div class="action-controls">
+            <button id="armOpenBtn" onclick="openRoboticArm()" disabled>Open Robotic Arm</button>
+            <button id="detectPlasticBtn" onclick="detectPlastic()">Detect Plastic</button>
+            <button id="batteryStatusBtn" onclick="checkBatteryStatus()">Battery Status</button>
+            <button id="obstacleDetectionBtn" onclick="detectObstacle()">Obstacle Detection</button>
+        </div>
+        <div class="status">
+            <p id="meshBagStatus">Mesh Bag Status: <span id="statusMessage">Not Available</span></p>
+            <p id="bagSpace">Remaining Space in Mesh Bag: <span id="space">100%</span></p>
+            <p id="dronePosition">Current Position: <span id="currentPosition">Unknown</span></p>
+            <p id="batteryStatus">Battery Level: <span id="batteryLevel">100%</span></p>
+        </div>
+        <video id="prototypeVideo" width="640" height="360" controls style="display: none;">
+            <source src="Prototype vedio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="navigationVideo" width="640" height="360" controls style="display: none;">
+            <source src="navigation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="control-buttons">
+            <button id="moveBtn" onclick="moveDrone()" class="circle-button green">Move</button>
+            <button id="stopBtn" onclick="stopDrone()" class="circle-button red">Stop</button>
+            <button id="navigateBtn" onclick="navigateDrone()">Navigate Drone</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
